@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/var/www/Django/Jangopoll/sqlite.db',                      # Or path to database file if using sqlite3.
+        'NAME': '/var/www/Django/Jangopoll/Jangopoll/sqlite.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -78,7 +78,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'mvs_%kptrw2e+t)b%++)_6!uf@n-je93yfls+e##uq^dfxtkrx'
+SECRET_KEY = '$)=k82odanqjz-hqcm!c_@=9sux(qcmh9gtj)6v!^!zhbgve%='
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
