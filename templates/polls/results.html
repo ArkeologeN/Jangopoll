@@ -4,21 +4,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>detail</title>
+		<title>results</title>
 		<meta name="author" content="Hamza Waqas" />
 		<!-- Date: 2012-08-28 -->
 	</head>
 	<body>
 		<h1>{{ poll.question }}</h1>
-		{% if error_message  %}<p><strong>{{ error.message }}</strong></p>{% endif %}
-		<form action="/polls/{{ poll.id }}/vote/" method="post">
-			{% csrf_token %}
+		
+		<ul>
 			{% for choice in poll.choice_set.all %}
-				<input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
-				<label for="choice{{ forloop.counter }}">{{ choice.choice }}</label><br />
+			<li>{{ choice.choice }} -- {{ choice.votes }} vote {{ choice.votes|pluralize }}</li>
 			{% endfor %}
-			<input type="submit" value="Vote" />
-		</form>
+		</ul>
+		<a href="/polls/{{ poll.id }}/">Vote Again?</a>
 	</body>
 </html>
 
